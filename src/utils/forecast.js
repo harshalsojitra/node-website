@@ -9,7 +9,7 @@ const forecast = (latitude, longitude, callback) => {
         } else if(body.error) {
             callback('Unable to find URL location', undefined)
         } else {
-            callback(undefined, ('It is currently ' + body.daily.data[0].summary + ' There is '+ body.currently.precipProbability + '% chance of rain.'))
+            callback(undefined, ('It is currently ' + body.daily.data[0].summary + 'It is currently '+ body.currently.temperature +' degree out. This high today is '+ body.daily.data[0].temperatureHigh + '. This low today is '+ body.daily.data[0].temperatureLow +'.  There is '+ body.currently.precipProbability + '% chance of rain.'))
         }
     })
 }
