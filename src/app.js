@@ -22,7 +22,7 @@ app.use(express.static(publicDiractoryPath))
 
 app.get('', (req,res) => {
     res.render('index', {
-        title: 'Name', 
+        title: 'Weather', 
         name: 'Harshal Sojitra'
     })
 })
