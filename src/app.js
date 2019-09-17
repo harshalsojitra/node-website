@@ -99,5 +99,5 @@ app.get('*', (req, res) => {
 })
 
 app.listen(port, () => {
-    console.log('Server is up and running on port 3000 babie!' + port)
+    console.log('Server is up and running babie!' + port)
 })
