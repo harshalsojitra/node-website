@@ -4,9 +4,10 @@ const hbs = require('hbs')
 const forecast = require('./utils/forecast')
 const geocode = require('./utils/geocode')
 
+const app = express()
+const port  = process.env.PORT || 3000 
 
 // Define path for express configuration.
-const app = express()
 const publicDiractoryPath = path.join(__dirname, '../public')
 const viewPath = path.join(__dirname, '../tempalets/views')
 const partialPath = path.join(__dirname, '../tempalets/partials')
@@ -97,6 +98,6 @@ app.get('*', (req, res) => {
     })
 })
 
-app.listen(3000, () => {
-    console.log('Server is up and running on port 3000 babie!')
-}) 
+app.listen(port, () => {
+    console.log('Server is up and running on port 3000 babie!' + port)
+})
